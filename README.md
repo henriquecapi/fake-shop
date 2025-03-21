@@ -25,40 +25,24 @@ NOSSO EXEMPLO:
 #Fake-lista-dos-comandos
     
     name: CI-CD
-    
     on:
-    
     push:
-    
       branches: ["main"]
-    
     workflow_dispatch:
-      
     jobs:
-    
       CI:
         runs-on: ubuntu-latest
-        
         steps:
-        
           - run: echo "Obter codigo"
-          
           - run: echo "Fazer Login no Docker Hub"
           - run: echo "Executar o Docker build"
           - run: echo "Enviar imagem Docker para o Docker Hub"
-  
       CD:
-    
         needs: [CI]
-        
         runs-on: ubuntu-latest
-        
         steps:
-        
           - run: echo "Obter codigo"
-          
           - run: echo "Configurar o kubeconfig"
-          
           - run: echo "Executar o apply"
 
 4 - UTILIZAR MARKETPLACE DE ACTIONS (https://github.com/marketplace?type=actions)
@@ -78,9 +62,11 @@ NOSSO EXEMPLO:
 6.4 - BUILD AND PUSH DOKER IMAGES
 
 # CD
+
 6.5 - CHECKOUT
 
 6.6 - KUBERNETS SET CONTEXT
 
 6.7 - DEPLOY TO KUBERNETES CLUSTER
 
+endereço temporário do site: http://159.203.156.67/
